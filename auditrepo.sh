@@ -43,7 +43,10 @@ git clone "$repo_url"
 # Extract repo name from URL
 REPO_NAME=$(basename "$repo_url" .git)
 
-# Open the cloned repo in Cursor
-/mnt/c/Users/<Your-Username>/AppData/Local/Programs/Cursor/Cursor.exe "$TARGET_DIR/$REPO_NAME"
+# Open the cloned repo in VSCode
+code "$TARGET_DIR/$REPO_NAME"
+
+# For Cursor uncomment next line and replace username
+#/mnt/c/Users/<Your-Username>/AppData/Local/Programs/Cursor/Cursor.exe "$TARGET_DIR/$REPO_NAME"
 
 echo "Repository cloned into $TARGET_DIR and opened in Cursor."
